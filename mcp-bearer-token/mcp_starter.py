@@ -242,7 +242,7 @@ async def workout_diet_plan(
             missing.append("age (in years)")
         
         raise McpError(ErrorData(
-            code=INVALID_PARAMS, 
+            code=INTERNAL_ERROR, 
             message=f"For a personalized plan, please provide: {', '.join(missing)}. These are essential for calculating proper calorie needs and exercise intensity."
         ))
     
